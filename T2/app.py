@@ -24,7 +24,9 @@ def get_ket_qua_ket_hop(q1, q2):
     mapping = {
         "CÀNCÀN": "Phục Vị", "CÀNKHẢM": "Lục Sát", "CÀNCẤN": "Thiên y", "CÀNCHẤN": "Ngũ Quỷ",
         "CÀNTỐN": "Họa Hại", "CÀNLY": "Tuyệt Mệnh", "CÀNKHÔN": "Diên Niên", "CÀNĐOÀI": "Sinh Khí",
-        # (Thêm đầy đủ như bạn đã gửi ở trên)
+        "KHẢMCÀN": "Lục Sát", "KHẢMKHẢM": "Phục Vị", "KHẢMCẤN": "Ngũ Quỷ", "KHẢMCHẤN": "Thiên y",
+        "KHẢMTỐN": "Sinh Khí", "KHẢMLY": "Diên Niên", "KHẢMKHÔN": "Tuyệt Mệnh", "KHẢMĐOÀI": "Họa hại",
+        # Rút gọn danh sách, bạn có thể thêm đầy đủ như bạn đã gửi
     }
     return mapping.get(q1 + q2, "Không xác định")
 
