@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tra Cứu Quái Mệnh – Quái Số</title>
+    <style>
+        body { font-family: Times New Roman; text-align: center; background: #fff; color: darkred; }
+        input { padding: 5px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Tra Cứu</h1>
+    <form method="post">
+        <p><strong>Số điện thoại:</strong> <input type="text" name="phone" required></p>
+        <p>
+            Ngày sinh: <input type="number" name="day" min="1" max="31" required>
+            Tháng sinh: <input type="number" name="month" min="1" max="12" required>
+            Năm sinh: <input type="number" name="year" required>
+        </p>
+        <p>
+            Giới tính:
+            <label><input type="radio" name="gender" value="Nam" checked> Nam</label>
+            <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+        </p>
+        <button type="submit">Tra Cứu</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">Lỗi: {{ error }}</p>
+    {% endif %}
+
+    {% if ketqua %}
+        <h2>Kết Quả:</h2>
+        <p>Ngày sinh Dương Lịch: {{ solar_date }}</p>
+        <p>Ngày sinh Âm Lịch: {{ lunar_date }}</p>
+        <p>Quẻ 1 (Quái mệnh): {{ quai1 }}</p>
+        <p>Quẻ 2 (Quái số): {{ quai2 }}</p>
+        <p><strong>Kết hợp: {{ ketqua }}</strong></p>
+    {% endif %}
+</body>
+</html>
